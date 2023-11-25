@@ -13,7 +13,7 @@ app.get('/api/servants', (req, res) => {
   res.json(servants);
 });
 app.get('/api/war', (req, res) => {
-  const limitedWarData = war.slice(0, 100);
+  const limitedWarData = war.slice(0, 60);
   res.json(limitedWarData);
 });
 

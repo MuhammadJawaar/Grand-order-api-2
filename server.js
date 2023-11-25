@@ -13,8 +13,9 @@ app.get('/api/servants', (req, res) => {
   res.json(servants);
 });
 app.get('/api/war', (req, res) => {
-    res.json(war);
-  });
+  const limitedWarData = war.slice(0, 10);
+  res.json(limitedWarData);
+});
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
